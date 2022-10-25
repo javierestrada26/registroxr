@@ -1,0 +1,31 @@
+<main class="main-container">
+    <section class="main-section">
+      <h2 class="title">
+        Registro de Entrada
+      </h2>
+      <li class="list-group-item"><strong>Ingreso de {{profile?.givenName}} a XR-Lab</strong></li>
+      <div class="form-card">
+        <form class="row g-6 needs-validation" [formGroup]="createIngreso" (ngSubmit)="agregarIngreso()" >
+          <div class="form-line">
+            <br>
+            <label for="date" class="form-label">Fecha Ingreso:</label>
+            <div class="form-input">
+              <input type="date" name="date" class="" formControlName="fecha"/>
+            </div>
+          </div>
+          
+          <div class="form-line">
+            <label for="time" class="form-label">Hora Ingreso:</label>
+            <div class="form-input">
+              <input type="time" name="date" class="" formControlName="hora" />
+            </div>
+          </div>
+          
+          <div class="col-12">
+            <br>
+            <button class="btn btn-primary" type="submit">Registrar Entrada</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>

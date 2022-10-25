@@ -1,0 +1,32 @@
+<main class="main-container">
+    <section class="main-section">
+      <h2 class="title">
+        Registro de Salida
+      </h2>
+      <li class="list-group-item"><strong>Salida de {{profile?.givenName}} de XR-Lab</strong></li>
+      <div class="form-card">
+        <form class="row g-6 needs-validation" [formGroup]="createSalida" (ngSubmit)="agregarSalida()" >
+          <div class="form-line">
+            <br>
+            <label for="date" class="form-label">Fecha Salida:</label>
+            <div class="form-input">
+              <input type="date" name="date" class="" formControlName="fecha"/>
+            </div>
+          </div>
+          
+          <div class="form-line">
+            <br>
+            <label for="time" class="form-label">Hora Salida:</label>
+            <div class="form-input">
+              <input type="time" name="date" class="" formControlName="hora" />
+            </div>
+          </div>
+          
+          <div class="col-12">
+            <br>
+            <button class="btn btn-primary" type="submit">Registrar Salida</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>

@@ -1,0 +1,20 @@
+<div class="wrapper">
+    <div class="body">
+        <img class="logo" src="../../../assets/img/user.png" alt="Login">
+        <h1>Login</h1>
+        <form >
+            <div class="form-floating mb-3">
+                <input type="email" formControlName="email" class="form-control" placeholder="name@example.com">
+                <label>Email</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" formControlName="password" class="form-control" placeholder="Password">
+                <label>Password</label>
+            </div>
+            <div class="d-grid gap-2">
+                <button class="btn btn-primary mt-3" type="button" (click)="login()" >Ingresar mediante Microsoft</button>
+            </div>   
+        </form>
+    </div>
+
+</div>

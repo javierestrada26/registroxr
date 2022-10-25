@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+  <a class="title" href="/">{{ title }}</a>
+
+  <div class="toolbar-spacer"></div>
+  <a mat-button *ngIf="loginDisplay" [routerLink]="['profile']">Perfil</a>
+  <a mat-button *ngIf="loginDisplay" [routerLink]="['registrar-horario']">Registrar Horario</a>
+  <a mat-button *ngIf="loginDisplay" [routerLink]="['registrar-entrada']">Registrar Entrada</a>
+  <a mat-button *ngIf="loginDisplay" [routerLink]="['registrar-salida']">Registrar salida</a>
+  <button mat-raised-button *ngIf="!loginDisplay" (click)="login()">Iniciar sesión con Microsoft</button>
+  <button mat-raised-button *ngIf="loginDisplay" (click)="logout()">Cerrar Sesión</button>
+
+
+</mat-toolbar>
+<div class="container">
+  <!--This is to avoid reload during acquireTokenSilent() because of hidden iframe -->
+  <router-outlet *ngIf="!isIframe"></router-outlet>
+</div>
